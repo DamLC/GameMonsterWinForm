@@ -1,6 +1,9 @@
-<<<<<<< HEAD
+
 "# GameMonsterWinForm" 
 =======
 
 GameMonster version WindowsForm
->>>>>>> cf50088... Update README.md
+
+c# v7.3
+
+.net v4.8
