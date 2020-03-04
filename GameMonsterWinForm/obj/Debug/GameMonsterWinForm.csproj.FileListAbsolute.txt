@@ -1,0 +1,9 @@
+C:\Users\damien.loconte\RiderProjects\GameMonsterWinForm\GameMonsterWinForm\bin\Debug\GameMonsterWinForm.exe.config
+C:\Users\damien.loconte\RiderProjects\GameMonsterWinForm\GameMonsterWinForm\bin\Debug\GameMonsterWinForm.exe
+C:\Users\damien.loconte\RiderProjects\GameMonsterWinForm\GameMonsterWinForm\bin\Debug\GameMonsterWinForm.pdb
+C:\Users\damien.loconte\RiderProjects\GameMonsterWinForm\GameMonsterWinForm\obj\Debug\GameMonsterWinForm.csprojAssemblyReference.cache
+C:\Users\damien.loconte\RiderProjects\GameMonsterWinForm\GameMonsterWinForm\obj\Debug\GameMonsterWinForm.Properties.Resources.resources
+C:\Users\damien.loconte\RiderProjects\GameMonsterWinForm\GameMonsterWinForm\obj\Debug\GameMonsterWinForm.csproj.GenerateResource.cache
+C:\Users\damien.loconte\RiderProjects\GameMonsterWinForm\GameMonsterWinForm\obj\Debug\GameMonsterWinForm.exe
+C:\Users\damien.loconte\RiderProjects\GameMonsterWinForm\GameMonsterWinForm\obj\Debug\GameMonsterWinForm.pdb
+C:\Users\damien.loconte\RiderProjects\GameMonsterWinForm\GameMonsterWinForm\obj\Debug\GameMonsterWinForm.Form1.resources
