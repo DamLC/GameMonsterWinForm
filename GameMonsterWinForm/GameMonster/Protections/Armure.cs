@@ -5,6 +5,8 @@ namespace TPjeu.Protections
 {
     public class Armure
     {
+        private static int potionArmure = 50;
+        
         public static decimal durabilité;
         
         public static bool estEntiere
@@ -29,14 +31,22 @@ namespace TPjeu.Protections
             if (estEntiere == true)
             {
                 durabilité -= degats;
-                Form1.combat.AppendText("Votre armure encaisse "+degats+ " degats");
-                Form1.combat.AppendText("Il reste "+durabilité + " Pts de durabilité a ton armure\n");
+                Niveaux.detailCombat.AppendText("Votre armure encaisse "+degats+ " degats");
+                Niveaux.detailCombat.AppendText(Narration.espace());
+                Niveaux.detailCombat.AppendText("Il reste "+durabilité + " Pts de durabilité a ton armure\n");
 
             }
             if(durabilité == 0 || durabilité <0)
             {
-                Form1.combat.AppendText("BRING!! Votre armure est cassée");
+                Niveaux.detailCombat.AppendText("BRING!! Votre armure est cassée");
             }
+        }
+        
+        public static decimal soigner()
+        {
+            Niveaux.detailCombat.AppendText("Vous prenez une potion +50 durabilité d'armure");
+            Niveaux.detailCombat.AppendText(Narration.espace());
+            return durabilité += potionArmure;
         }
     }
 }

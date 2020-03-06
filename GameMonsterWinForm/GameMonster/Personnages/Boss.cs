@@ -45,13 +45,14 @@ namespace TPjeu.Personnages
 
             if (pointVie <100)
             {
-                Form1.combat.AppendText(Narration.changeArme());
                 degats = lancerDe(26) + epee.frappe;
             }
             
-            Form1.combat.AppendText("Il  reste "+ pointVie + " PV au boss, ");
-            Form1.combat.AppendText( DialogueBoss.effetDegatsBoss(degats));
-            Form1.combat.AppendText(" le boss vous infige "+degats+" dégats\n");
+            Niveaux.detailCombat.AppendText(" Il  reste "+ pointVie + " PV au boss, ");
+            Niveaux.detailCombat.AppendText(Narration.espace());
+            Niveaux.detailCombat.AppendText( DialogueBoss.effetDegatsBoss(degats));
+            Niveaux.detailCombat.AppendText(Narration.espace());
+            Niveaux.detailCombat.AppendText(" le boss vous infige "+degats+" dégats\n");
             joueur.subitDegats(degats);
             
            

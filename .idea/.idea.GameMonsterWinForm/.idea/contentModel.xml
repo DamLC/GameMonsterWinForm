@@ -18,6 +18,11 @@
             <e p="Epee.cs" t="Include" />
             <e p="EpeeBoss.cs" t="Include" />
           </e>
+          <e p="Monstres" t="Include">
+            <e p="FabriqueMonstre.cs" t="Include" />
+            <e p="MonstreDifficile.cs" t="Include" />
+            <e p="MonstreFacile.cs" t="Include" />
+          </e>
           <e p="Personnages" t="Include">
             <e p="Boss.cs" t="Include" />
             <e p="Joueur.cs" t="Include" />
@@ -31,11 +36,17 @@
             <e p="Narration.cs" t="Include" />
           </e>
         </e>
-        <e p="GameMonster.cs" t="Include" />
-        <e p="GameMonster.Designer.cs" t="Include" />
-        <e p="GameMonster.resx" t="Include" />
         <e p="GameMonsterWinForm.csproj" t="IncludeRecursive" />
+        <e p="Inventaire.cs" t="Include" />
+        <e p="Inventaire.Designer.cs" t="Include" />
+        <e p="Inventaire.resx" t="Include" />
+        <e p="Jeu.cs" t="Include" />
+        <e p="Jeu.Designer.cs" t="Include" />
+        <e p="Jeu.resx" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
+        <e p="personnage.cs" t="Include" />
+        <e p="personnage.Designer.cs" t="Include" />
+        <e p="personnage.resx" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />

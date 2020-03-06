@@ -46,26 +46,47 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="GameMonster.cs">
+        <Compile Include="Inventaire.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Inventaire.Designer.cs">
+          <DependentUpon>Inventaire.cs</DependentUpon>
+        </Compile>
+        <Compile Include="Personnage.cs">
             <SubType>Form</SubType>
         </Compile>
-        <Compile Include="GameMonster.Designer.cs">
-            <DependentUpon>GameMonster.cs</DependentUpon>
+        <Compile Include="personnage.Designer.cs">
+            <DependentUpon>Personnage.cs</DependentUpon>
         </Compile>
         <Compile Include="GameMonster\Accessoires\De.cs" />
         <Compile Include="GameMonster\Accessoires\PotionVie.cs" />
         <Compile Include="GameMonster\Armes\Epee.cs" />
         <Compile Include="GameMonster\Armes\EpeeBoss.cs" />
+        <Compile Include="GameMonster\Monstres\FabriqueMonstre.cs" />
+        <Compile Include="GameMonster\Monstres\MonstreDifficile.cs" />
+        <Compile Include="GameMonster\Monstres\MonstreFacile.cs" />
         <Compile Include="GameMonster\Personnages\Boss.cs" />
         <Compile Include="GameMonster\Personnages\Joueur.cs" />
         <Compile Include="GameMonster\Protections\Armure.cs" />
         <Compile Include="GameMonster\Textes\DialogueBoss.cs" />
         <Compile Include="GameMonster\Textes\DialogueJoueur.cs" />
         <Compile Include="GameMonster\Textes\Narration.cs" />
+        <Compile Include="Jeu.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Jeu.Designer.cs">
+          <DependentUpon>Jeu.cs</DependentUpon>
+        </Compile>
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
-        <EmbeddedResource Include="GameMonster.resx">
-          <DependentUpon>GameMonster.cs</DependentUpon>
+        <EmbeddedResource Include="Inventaire.resx">
+          <DependentUpon>Inventaire.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="personnage.resx">
+          <DependentUpon>Personnage.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Jeu.resx">
+          <DependentUpon>Jeu.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Properties\Resources.resx">
             <Generator>ResXFileCodeGenerator</Generator>

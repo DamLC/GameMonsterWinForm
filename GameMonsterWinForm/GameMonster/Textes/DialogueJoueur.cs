@@ -11,7 +11,7 @@ namespace TPjeu
         {
             return " Joueur -> Meurs donc !! Créature infame. \n";
         }
-        public static object mortMonstre()
+        public static string mortMonstre()
         {
             return" Joueur -> Il sont trop nombreux.\n Oh mais non je vais mourir tuer par des zombies puant!\n la honte.";
         }
