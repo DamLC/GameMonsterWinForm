@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 using GameMonsterWinForm;
 
 namespace TPjeu.Protections
@@ -6,6 +7,7 @@ namespace TPjeu.Protections
     public class Armure
     {
         private static int potionArmure = 50;
+        private static int cptPopo = 1;
         
         public static decimal durabilité;
         
@@ -44,9 +46,19 @@ namespace TPjeu.Protections
         
         public static decimal soigner()
         {
-            Niveaux.detailCombat.AppendText("Vous prenez une potion +50 durabilité d'armure");
-            Niveaux.detailCombat.AppendText(Narration.espace());
-            return durabilité += potionArmure;
+            if (cptPopo == 1)
+            {
+                Niveaux.detailCombat.AppendText("Vous prenez une potion +50 durabilité d'armure");
+                Niveaux.detailCombat.AppendText(Narration.espace());
+                cptPopo--;
+                return durabilité += potionArmure;
+            }
+            else
+            {
+                MessageBox.Show("Vous n'avez plus de potion de soins");
+            }
+
+            return durabilité;
         }
     }
 }

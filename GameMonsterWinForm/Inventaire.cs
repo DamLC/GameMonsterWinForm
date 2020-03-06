@@ -25,6 +25,7 @@ namespace GameMonsterWinForm
         private void fermer_Click(object sender, EventArgs e)
         {
             Inventaire.ActiveForm.Close();
+            Form1.active = false;
         }
     }
 }

@@ -11,17 +11,29 @@ namespace GameMonsterWinForm
             InitializeComponent();
         }
 
+
+        private bool active = false;
+
         #region deuxieme fenetre
 
         private void choixNiveaux_Click(object sender, EventArgs e)
         {
-            Form1 gameMonster = new Form1();
-            gameMonster.Show();
+            if (active != true)
+            {
+                Form1 gameMonster = new Form1();
+                gameMonster.Show();
+                active = true;
+            }
+            else
+            {
+                MessageBox.Show("cette fenêtre est déja ouverte");
+            }
         }
 
+
         #endregion
-       
-        
+
+
         #region Quitter
 
         private void end_Click(object sender, EventArgs e)
@@ -30,6 +42,5 @@ namespace GameMonsterWinForm
         }
 
         #endregion
-        
     }
 }

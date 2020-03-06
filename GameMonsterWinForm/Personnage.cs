@@ -13,8 +13,14 @@ namespace GameMonsterWinForm
             InitializeComponent();
         }
 
+        #region Boolean
+
         private bool _niveau1 = false;
         private bool _niveauF = false;
+        public static bool active = false;
+
+        #endregion
+        
 
         #region Compteur
 
@@ -310,8 +316,16 @@ namespace GameMonsterWinForm
 
         private void inventaire_Click(object sender, EventArgs e)
         {
-            Inventaire inventaire = new Inventaire();
-            inventaire.Show();
+            if (active != true)
+            {
+                 Inventaire inventaire = new Inventaire();
+                            inventaire.Show();
+                            active = true;
+            }
+            else
+            {
+                MessageBox.Show("cette fenêtre est déja ouverte");
+            }
         }
 
         #endregion
