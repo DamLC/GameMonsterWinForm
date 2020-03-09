@@ -56,7 +56,7 @@ namespace GameMonsterWinForm
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(424, 198);
+            this.groupBox1.Size = new System.Drawing.Size(423, 198);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Potion";
@@ -124,7 +124,7 @@ namespace GameMonsterWinForm
             this.fermer.Font = new System.Drawing.Font("Segoe UI", 9.75F,
                 ((System.Drawing.FontStyle) ((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))),
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.fermer.Location = new System.Drawing.Point(263, 239);
+            this.fermer.Location = new System.Drawing.Point(262, 239);
             this.fermer.Name = "fermer";
             this.fermer.Size = new System.Drawing.Size(126, 39);
             this.fermer.TabIndex = 1;

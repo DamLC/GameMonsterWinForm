@@ -254,12 +254,17 @@ namespace TPjeu.Personnages
         {
             
 
-            if (cptPopo == 1)
+            if (cptPopo == 1 && ((Form1._niveau1 == true && Form1.heroCree == true)|| (Form1._niveauF == true && Form1.heroCree == true && Form1.bossCree == true)))
             {
                 Niveaux.detailCombat.AppendText("Vous prenez une potion +50 PV");
                 Niveaux.detailCombat.AppendText(Narration.espace());
                 cptPopo--;
                 return pointVie += potionVie;
+            }
+
+            if (cptPopo == 1 && (Form1._niveau1 == false || Form1._niveauF == false))
+            {
+                MessageBox.Show("Vous devez être en partie pour prendre une potion");
             }
             else
             {

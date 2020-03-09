@@ -13,15 +13,16 @@ namespace GameMonsterWinForm
             InitializeComponent();
         }
 
-        #region Boolean
+        #region Boolean vérification
 
-        private bool _niveau1 = false;
-        private bool _niveauF = false;
+        public static bool _niveau1 = false;
+        public static bool _niveauF = false;
         public static bool active = false;
-
-        #endregion
+        public static bool heroCree = false;
+        public static bool bossCree = false;
         
-
+        #endregion 
+        
         #region Compteur
 
         int xp = 0;
@@ -33,7 +34,6 @@ namespace GameMonsterWinForm
         #region Attribut Hero
 
         public static Joueur hero;
-        private bool heroCree = false;
         private string nomDuHero;
         private static decimal vieHero;
         private decimal armureDuHero;
@@ -44,7 +44,6 @@ namespace GameMonsterWinForm
         #region Attribut Boss
 
         public static Boss _boss;
-        private bool bossCree = false;
         private string nomDuBoss;
         private decimal vieBoss;
         private decimal degatsBoss;
@@ -248,7 +247,8 @@ namespace GameMonsterWinForm
             }
             catch (Exception)
             {
-                MessageBox.Show("Pour lancer le dé il faut choisir le niveau final," +
+                MessageBox.Show("Pour lancer le dé il faut :\n soit choisir le niveau I et créer un hero\n" +
+                                "soit choisir le niveau final," +
                                 " créer un héro, créer un boss ");
             }
         }
@@ -265,6 +265,7 @@ namespace GameMonsterWinForm
             {
                 if (heroCree != true)
                 {
+                    Niveaux.detailCombat.AppendText(Narration.espace());
                     Niveaux.detailCombat.AppendText("crée un hero et reclick le bouton pour la narration\n");
                 }
                 else
@@ -298,6 +299,7 @@ namespace GameMonsterWinForm
             {
                 if (bossCree != true && heroCree != true)
                 {
+                    Niveaux.detailCombat.AppendText(Narration.espace());
                     Niveaux.detailCombat.AppendText("crée un hero, un boss et lance le dé\n") ;
                 }
                
@@ -318,9 +320,9 @@ namespace GameMonsterWinForm
         {
             if (active != true)
             {
-                 Inventaire inventaire = new Inventaire();
-                            inventaire.Show();
-                            active = true;
+                Inventaire inventaire = new Inventaire();
+                inventaire.Show();
+                active = true;
             }
             else
             {

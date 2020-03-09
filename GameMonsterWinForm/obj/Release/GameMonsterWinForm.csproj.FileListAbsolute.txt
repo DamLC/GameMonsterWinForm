@@ -7,3 +7,5 @@ C:\Users\damien.loconte\RiderProjects\GameMonsterWinForm\GameMonsterWinForm\obj\
 C:\Users\damien.loconte\RiderProjects\GameMonsterWinForm\GameMonsterWinForm\obj\Release\GameMonsterWinForm.csproj.GenerateResource.cache
 C:\Users\damien.loconte\RiderProjects\GameMonsterWinForm\GameMonsterWinForm\obj\Release\GameMonsterWinForm.exe
 C:\Users\damien.loconte\RiderProjects\GameMonsterWinForm\GameMonsterWinForm\obj\Release\GameMonsterWinForm.pdb
+C:\Users\damien.loconte\RiderProjects\GameMonsterWinForm\GameMonsterWinForm\obj\Release\GameMonsterWinForm.Inventaire.resources
+C:\Users\damien.loconte\RiderProjects\GameMonsterWinForm\GameMonsterWinForm\obj\Release\GameMonsterWinForm.Niveaux.resources

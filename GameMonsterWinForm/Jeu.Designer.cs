@@ -45,7 +45,7 @@ namespace GameMonsterWinForm
             this.end.Font = new System.Drawing.Font("Segoe UI Black", 9.75F,
                 ((System.Drawing.FontStyle) ((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))),
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.end.Location = new System.Drawing.Point(426, 375);
+            this.end.Location = new System.Drawing.Point(300, 375);
             this.end.Name = "end";
             this.end.Size = new System.Drawing.Size(157, 174);
             this.end.TabIndex = 98;
@@ -75,7 +75,7 @@ namespace GameMonsterWinForm
             Niveaux.detailCombat.Multiline = true;
             Niveaux.detailCombat.Name = "detailCombat";
             Niveaux.detailCombat.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            Niveaux.detailCombat.Size = new System.Drawing.Size(711, 357);
+            Niveaux.detailCombat.Size = new System.Drawing.Size(500, 357);
             Niveaux.detailCombat.TabIndex = 100;
             Niveaux.detailCombat.Text = resources.GetString("detailCombat.Text");
             // 
@@ -85,7 +85,7 @@ namespace GameMonsterWinForm
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (224)))), ((int) (((byte) (224)))),
                 ((int) (((byte) (224)))));
-            this.ClientSize = new System.Drawing.Size(735, 561);
+            this.ClientSize = new System.Drawing.Size(550, 561);
             this.Controls.Add(Niveaux.detailCombat);
             this.Controls.Add(this.end);
             this.Controls.Add(this.choixNiveaux);
