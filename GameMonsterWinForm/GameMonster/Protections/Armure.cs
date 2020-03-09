@@ -46,16 +46,20 @@ namespace TPjeu.Protections
         
         public static decimal soigner()
         {
-            if (cptPopo == 1)
+            if (cptPopo == 1 && ((Form1._niveau1 == true && Form1.heroCree == true)|| (Form1._niveauF == true && Form1.heroCree == true && Form1.bossCree == true)))
             {
                 Niveaux.detailCombat.AppendText("Vous prenez une potion +50 durabilité d'armure");
                 Niveaux.detailCombat.AppendText(Narration.espace());
                 cptPopo--;
                 return durabilité += potionArmure;
             }
+            if (cptPopo == 1 && (Form1._niveau1 == false || Form1._niveauF == false))
+            {
+                MessageBox.Show("Vous devez être en partie pour prendre une potion");
+            }
             else
             {
-                MessageBox.Show("Vous n'avez plus de potion de soins");
+                MessageBox.Show("Vous n'avez plus de potion ");
             }
 
             return durabilité;
