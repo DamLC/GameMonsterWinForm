@@ -56,11 +56,11 @@ namespace TPjeu.Personnages
             int LancerMonstre = monstre.lancerDe(26);
             if (lancerJoueur >= LancerMonstre)
             {
-                Niveaux.detailCombat.AppendText("\n Il vous reste " + PointVie + " PV, ");
-                Niveaux.detailCombat.AppendText(Narration.espace());
+                Niveaux.combat.AppendText("\n Il vous reste " + PointVie + " PV, ");
+                Niveaux.combat.AppendText(Narration.espace());
 
-                Niveaux.detailCombat.AppendText("vous infigez au monstre " + lancerJoueur + " dégats d'épée\n");
-                Niveaux.detailCombat.AppendText(Narration.espace());
+                Niveaux.combat.AppendText("vous infigez au monstre " + lancerJoueur + " dégats d'épée\n");
+                Niveaux.combat.AppendText(Narration.espace());
                 monstre.subitDegats();
 
             }
@@ -72,12 +72,12 @@ namespace TPjeu.Personnages
 
             decimal degats = lancerDe(26) + arme.degatsCAC;
 
-            Niveaux.detailCombat.AppendText("\n Il vous reste " + PointVie + " PV, ");
-            Niveaux.detailCombat.AppendText(Narration.espace());
-
-            Niveaux.detailCombat.AppendText(DialogueJoueur.effetDegatsJoueur(degats));
-            Niveaux.detailCombat.AppendText(Narration.espace());
-            Niveaux.detailCombat.AppendText("vous infigez au boss " + degats + " dégats d'épée\n");
+            Niveaux.combat.AppendText("\n Il vous reste " + PointVie + " PV, ");
+            Niveaux.combat.AppendText(Narration.espace());
+            
+            Niveaux.combat.AppendText(DialogueJoueur.effetDegatsJoueur(degats));
+            Niveaux.combat.AppendText(Narration.espace());
+            Niveaux.combat.AppendText("vous infigez au boss " + degats + " dégats d'épée\n");
             boss.subitDegats(degats);
 
 
@@ -87,8 +87,8 @@ namespace TPjeu.Personnages
         {
             if (bouclier(degats) == true)
             {
-                Niveaux.detailCombat.AppendText(DialogueJoueur.esquive());
-                Niveaux.detailCombat.AppendText(Narration.espace());
+                Niveaux.combat.AppendText(DialogueJoueur.esquive());
+                Niveaux.combat.AppendText(Narration.espace());
 
                 return pointVie;
             }
@@ -102,8 +102,8 @@ namespace TPjeu.Personnages
         {
             if (bouclier(degats) == true)
             {
-                Niveaux.detailCombat.AppendText(DialogueJoueur.esquive());
-                Niveaux.detailCombat.AppendText(Narration.espace());
+                Niveaux.combat.AppendText(DialogueJoueur.esquive());
+                Niveaux.combat.AppendText(Narration.espace());
 
                 return pointVie;
             }
@@ -115,6 +115,7 @@ namespace TPjeu.Personnages
             }
             else
             {
+                Niveaux.combat.AppendText("le monstre vous inflige " + degats + " dégats \n");
                 return pointVie -= degats;
             }
         }
@@ -256,8 +257,8 @@ namespace TPjeu.Personnages
 
             if (cptPopo == 1 && ((Form1._niveau1 == true && Form1.heroCree == true)|| (Form1._niveauF == true && Form1.heroCree == true && Form1.bossCree == true)))
             {
-                Niveaux.detailCombat.AppendText("Vous prenez une potion +50 PV");
-                Niveaux.detailCombat.AppendText(Narration.espace());
+                Niveaux.combat.AppendText("Vous prenez une potion +50 PV");
+                Niveaux.combat.AppendText(Narration.espace());
                 cptPopo--;
                 return pointVie += potionVie;
             }

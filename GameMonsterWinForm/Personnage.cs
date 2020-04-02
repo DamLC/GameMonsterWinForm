@@ -114,12 +114,12 @@ namespace GameMonsterWinForm
                 {
 
                     hero = new Joueur(nomDuHero, vieHero, armureDuHero, degatsHero);
-                    Niveaux.detailCombat.AppendText(" Notre hero " +
+                    Niveaux.combat.AppendText(" Notre hero " +
                                                     nomDuHero + " a été créer! \n " +
                                                     vieHero + " PV\n " +
-                                                    armureDuHero + " durabilité d'armure\n " +
+                                                    armureDuHero + " Pts d'armure\n " +
                                                     degatsHero + " dégats d'épée \n");
-                    Niveaux.detailCombat.AppendText(Narration.espace());
+                    Niveaux.combat.AppendText(Narration.espace());
 
                     heroCree = true;
 
@@ -144,11 +144,11 @@ namespace GameMonsterWinForm
                 {
 
                     _boss = new Boss(nomDuBoss, vieBoss, degatsBoss);
-                    Niveaux.detailCombat.AppendText("Le boss " +
+                    Niveaux.combat.AppendText("Le boss " +
                                                     nomDuBoss + " a été créer! \n " +
                                                     vieBoss + " PV\n " +
                                                     degatsBoss + " dégats d'épée \n");
-                    Niveaux.detailCombat.AppendText(Narration.espace());
+                    Niveaux.combat.AppendText(Narration.espace());
 
                     bossCree = true;
 
@@ -173,7 +173,6 @@ namespace GameMonsterWinForm
                 {
                     if (hero.estVivant == true)
                     {
-                        //creer un monstre 
                         MonstreFacile monstre = FabriqueMonstre.creerMonstre();
                                        
                         if (monstre.estVivant == true && hero.estVivant == true)
@@ -199,20 +198,20 @@ namespace GameMonsterWinForm
                                 }
                                 else
                                 {
-                                    Niveaux.detailCombat.AppendText(DialogueJoueur.mortMonstre());
-                                    Niveaux.detailCombat.AppendText(Narration.espace());                           
-                                    Niveaux.detailCombat.AppendText("Bravo! tu as tué "+cptFacile+" monstres faciles " +
+                                    Niveaux.combat.AppendText(DialogueJoueur.mortMonstre());
+                                    Niveaux.combat.AppendText(Narration.espace());                           
+                                    Niveaux.combat.AppendText("Bravo! tu as tué "+cptFacile+" monstres faciles " +
                                                                     " et "+cptDifficile+" monstres difficiles. tu as gagné "+xp+" xp.\n");
-                                    Niveaux.detailCombat.AppendText(Narration.espace());                           
+                                    Niveaux.combat.AppendText(Narration.espace());                           
 
-                                    Niveaux.detailCombat.AppendText(Joueur.levelUp(xp));
-                                    Niveaux.detailCombat.AppendText(Narration.espace());
+                                    Niveaux.combat.AppendText(Joueur.levelUp(xp));
+                                    Niveaux.combat.AppendText(Narration.espace());
 
-                                    Niveaux.detailCombat.AppendText(Narration.fin());
-                                    Niveaux.detailCombat.AppendText(Narration.espace());
+                                    Niveaux.combat.AppendText(Narration.fin());
+                                    Niveaux.combat.AppendText(Narration.espace());
 
-                                    Niveaux.detailCombat.AppendText(Narration.deuxiemeChance()); 
-                                    Niveaux.detailCombat.AppendText(Narration.espace());   
+                                    Niveaux.combat.AppendText(Narration.deuxiemeChance()); 
+                                    Niveaux.combat.AppendText(Narration.espace());   
                                 }
                             }
                         }
@@ -223,26 +222,25 @@ namespace GameMonsterWinForm
                     if(hero.estVivant && _boss.estVivant)
                     {
                         hero.attaque(_boss);
-                        Niveaux.detailCombat.AppendText(Narration.espace());
+                        Niveaux.combat.AppendText(Narration.espace());
                                                             
                                        
                         _boss.attaque(hero);
-                        Niveaux.detailCombat.AppendText(Narration.espace());
+                        Niveaux.combat.AppendText(Narration.espace());
                     } 
                     if( _boss.estVivant && !hero.estVivant)
                     {
-                        Niveaux.detailCombat.AppendText(DialogueJoueur.deuxiemeMort()) ;
-                        Niveaux.detailCombat.AppendText(DialogueBoss.tueJoueur());
-                        Niveaux.detailCombat.AppendText(Narration.fin3());
-                        Niveaux.detailCombat.AppendText(Narration.fin());
+                        Niveaux.combat.AppendText(DialogueJoueur.deuxiemeMort()) ;
+                        Niveaux.combat.AppendText(DialogueBoss.tueJoueur());
+                        Niveaux.combat.AppendText(Narration.fin3());
+                        Niveaux.combat.AppendText(Narration.fin());
                     }
                     if(hero.estVivant && !_boss.estVivant)
                     {
-                        Niveaux.detailCombat.AppendText(DialogueJoueur.tueBoss());
-                        Niveaux.detailCombat.AppendText(Narration.fin2());
+                        Niveaux.combat.AppendText(DialogueJoueur.tueBoss());
+                        Niveaux.combat.AppendText(Narration.fin2());
                     }  
                 }
-                
                
             }
             catch (Exception)
@@ -259,29 +257,31 @@ namespace GameMonsterWinForm
 
         private void niveau1_Click(object sender, EventArgs e)
         {
-            _niveau1 = true;
-
             try
             {
                 if (heroCree != true)
-                {
-                    Niveaux.detailCombat.AppendText(Narration.espace());
-                    Niveaux.detailCombat.AppendText("crée un hero et reclick le bouton pour la narration\n");
+                { 
+                    Niveaux.combat.AppendText(Narration.espace());
+                    Niveaux.combat.AppendText("crée un hero et reclick le bouton pour la narration\n");
                 }
                 else
                 {
-                    Niveaux.detailCombat.AppendText(Narration.debut()) ;
-                    Niveaux.detailCombat.AppendText(Narration.espace());  
+                    _niveau1 = true;
+                    Niveaux.combat.AppendText(Narration.debut()) ;
+                    Niveaux.combat.AppendText(Narration.espace());  
                                     
-                    Niveaux.detailCombat.AppendText(Narration.arrivee()); 
-                    Niveaux.detailCombat.AppendText(Narration.espace());
+                    Niveaux.combat.AppendText(Narration.arrivee()); 
+                    Niveaux.combat.AppendText(Narration.espace());
                
-                    Niveaux.detailCombat.AppendText(Narration.niveau());
-                    Niveaux.detailCombat.AppendText(Narration.espace());                           
+                    Niveaux.combat.AppendText(Narration.niveau());
+                    Niveaux.combat.AppendText(Narration.espace());                           
                
                                                                   
-                    Niveaux.detailCombat.AppendText(Narration.combat());
-                    Niveaux.detailCombat.AppendText(Narration.espace()); 
+                    Niveaux.combat.AppendText(Narration.combat());
+                    Niveaux.combat.AppendText(Narration.espace()); 
+                    
+                    Niveaux.combat.AppendText(Narration.espace());
+                    Niveaux.combat.AppendText("Lance le d pour commencer la partie");
                 }
             }
             catch (Exception)
@@ -293,20 +293,20 @@ namespace GameMonsterWinForm
        
         private void niveauFinal_Click(object sender, EventArgs e)
         {
-            _niveauF = true;
-
             try
             {
+               
                 if (bossCree != true && heroCree != true)
                 {
-                    Niveaux.detailCombat.AppendText(Narration.espace());
-                    Niveaux.detailCombat.AppendText("crée un hero, un boss et lance le dé\n") ;
+                    Niveaux.combat.AppendText(Narration.espace());
+                    Niveaux.combat.AppendText("crée un hero, un boss et lance le dé\n") ;
                 }
                
             }
             catch (Exception )
             {
-                Niveaux.detailCombat.AppendText("");
+                _niveauF = true;
+                Niveaux.combat.AppendText("");
             }
             
         }

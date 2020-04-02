@@ -12,6 +12,7 @@ namespace GameMonsterWinForm
             InitializeComponent();
         }
 
+        #region Potion
         private void button1_Click(object sender, EventArgs e)
         {
             Joueur.soigner();
@@ -22,10 +23,17 @@ namespace GameMonsterWinForm
             Armure.soigner();
         }
 
+        #endregion
+       
+        #region Fermer
+
         private void fermer_Click(object sender, EventArgs e)
         {
             Inventaire.ActiveForm.Close();
             Form1.active = false;
         }
+
+        #endregion
+       
     }
 }

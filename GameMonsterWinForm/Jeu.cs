@@ -10,8 +10,7 @@ namespace GameMonsterWinForm
         {
             InitializeComponent();
         }
-
-
+        
         private bool active = false;
 
         #region deuxieme fenetre
@@ -42,5 +41,10 @@ namespace GameMonsterWinForm
         }
 
         #endregion
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

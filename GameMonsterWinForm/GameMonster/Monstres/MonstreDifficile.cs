@@ -13,10 +13,8 @@ namespace TPjeu.Monstres
             int lancerJoueur = joueur.lancerDe(26);
             if ( lancerJoueur< 6)
             {
-                Niveaux.detailCombat.AppendText("le monstre difficile vous inflige " + lancerJoueur *degatsMagique + " dégats \n");
-                Niveaux.detailCombat.AppendText(Narration.espace());
-                 joueur.subirDegats(lancerJoueur * degatsMagique);
-                 Niveaux.detailCombat.AppendText("\n Il vous reste " + joueur.PointVie + " PV, ");
+                Niveaux.combat.AppendText(Narration.espace());
+                 joueur.subitDegats(lancerJoueur * degatsMagique);
             }                            
         }
     }

@@ -8,7 +8,6 @@ namespace TPjeu.Monstres
     {
         private De de;
         public bool estVivant { get; private set; }
-        private int degats = 10;
 
         public MonstreFacile()
         {
@@ -24,21 +23,19 @@ namespace TPjeu.Monstres
         public void attaque(Joueur joueur)
         {
             int lancerJoueur = joueur.lancerDe(26);
-            int LancerMonstre =  lancerDe(26);
-            if (lancerJoueur < LancerMonstre)
+            int  degats =   lancerDe(26);
+            if (lancerJoueur < degats)
             {
-                Niveaux.detailCombat.AppendText("le monstre vous inflige " + LancerMonstre + " dégats \n");
-                Niveaux.detailCombat.AppendText(Narration.espace());
-                joueur.subirDegats(degats);
-                Niveaux.detailCombat.AppendText("\n Il vous reste " + joueur.PointVie + " PV, ");
+                Niveaux.combat.AppendText(Narration.espace());
+                joueur.subitDegats(degats);
             }
         }
 
         public void  subitDegats()
         {
             estVivant = false;
-            Niveaux.detailCombat.AppendText("vous avez one shoot le monstre\n");
-            Niveaux.detailCombat.AppendText(Narration.espace());
+            Niveaux.combat.AppendText("vous avez one shoot le monstre\n");
+            Niveaux.combat.AppendText(Narration.espace());
         }
     }
 }

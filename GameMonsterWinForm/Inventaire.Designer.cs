@@ -124,7 +124,7 @@ namespace GameMonsterWinForm
             this.fermer.Font = new System.Drawing.Font("Segoe UI", 9.75F,
                 ((System.Drawing.FontStyle) ((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))),
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.fermer.Location = new System.Drawing.Point(262, 239);
+            this.fermer.Location = new System.Drawing.Point(309, 239);
             this.fermer.Name = "fermer";
             this.fermer.Size = new System.Drawing.Size(126, 39);
             this.fermer.TabIndex = 1;
@@ -137,7 +137,7 @@ namespace GameMonsterWinForm
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(472, 290);
+            this.ClientSize = new System.Drawing.Size(450, 290);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.fermer);
             this.Name = "Inventaire";

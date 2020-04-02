@@ -33,14 +33,14 @@ namespace TPjeu.Protections
             if (estEntiere == true)
             {
                 durabilité -= degats;
-                Niveaux.detailCombat.AppendText("Votre armure encaisse "+degats+ " degats");
-                Niveaux.detailCombat.AppendText(Narration.espace());
-                Niveaux.detailCombat.AppendText("Il reste "+durabilité + " Pts de durabilité a ton armure\n");
+                Niveaux.combat.AppendText("Votre armure encaisse "+degats+ " degats");
+                Niveaux.combat.AppendText(Narration.espace());
+                Niveaux.combat.AppendText("Il reste "+durabilité + " Pts de durabilité a ton armure\n");
 
             }
             if(durabilité == 0 || durabilité <0)
             {
-                Niveaux.detailCombat.AppendText("BRING!! Votre armure est cassée");
+                Niveaux.combat.AppendText("BRING!! Votre armure est cassée");
             }
         }
         
@@ -48,8 +48,8 @@ namespace TPjeu.Protections
         {
             if (cptPopo == 1 && ((Form1._niveau1 == true && Form1.heroCree == true)|| (Form1._niveauF == true && Form1.heroCree == true && Form1.bossCree == true)))
             {
-                Niveaux.detailCombat.AppendText("Vous prenez une potion +50 durabilité d'armure");
-                Niveaux.detailCombat.AppendText(Narration.espace());
+                Niveaux.combat.AppendText("Vous prenez une potion +50 durabilité d'armure");
+                Niveaux.combat.AppendText(Narration.espace());
                 cptPopo--;
                 return durabilité += potionArmure;
             }

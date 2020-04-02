@@ -216,12 +216,11 @@
         /9k=
 </value>
   </data>
-  <data name="detailCombat.Text" xml:space="preserve">
-    <value>*********************************************
-             Bienvenue au GameMonster
-*********************************************
-               Choisissez un niveaux  
-                    Bonne chance !
-</value>
+  <data name="combat.Text" xml:space="preserve">
+    <value>               **********************************
+                 Bienvenue au GameMonster
+               *********************************
+                       choisissez un niveaux                           
+                            Bonne chance!</value>
   </data>
 </root>

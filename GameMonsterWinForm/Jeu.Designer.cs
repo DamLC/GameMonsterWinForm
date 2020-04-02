@@ -35,7 +35,7 @@ namespace GameMonsterWinForm
                 new System.ComponentModel.ComponentResourceManager(typeof(Niveaux));
             this.end = new System.Windows.Forms.Button();
             this.choixNiveaux = new System.Windows.Forms.Button();
-            Niveaux.detailCombat = new System.Windows.Forms.TextBox();
+            Niveaux.combat = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // end
@@ -45,7 +45,7 @@ namespace GameMonsterWinForm
             this.end.Font = new System.Drawing.Font("Segoe UI Black", 9.75F,
                 ((System.Drawing.FontStyle) ((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))),
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.end.Location = new System.Drawing.Point(300, 375);
+            this.end.Location = new System.Drawing.Point(205, 377);
             this.end.Name = "end";
             this.end.Size = new System.Drawing.Size(157, 174);
             this.end.TabIndex = 98;
@@ -57,7 +57,7 @@ namespace GameMonsterWinForm
             // choixNiveaux
             // 
             this.choixNiveaux.BackColor = System.Drawing.Color.Yellow;
-            this.choixNiveaux.Location = new System.Drawing.Point(44, 428);
+            this.choixNiveaux.Location = new System.Drawing.Point(12, 432);
             this.choixNiveaux.Name = "choixNiveaux";
             this.choixNiveaux.Size = new System.Drawing.Size(159, 45);
             this.choixNiveaux.TabIndex = 99;
@@ -65,19 +65,16 @@ namespace GameMonsterWinForm
             this.choixNiveaux.UseVisualStyleBackColor = false;
             this.choixNiveaux.Click += new System.EventHandler(this.choixNiveaux_Click);
             // 
-            // detailCombat
+            // combat
             // 
-            Niveaux.detailCombat.BackColor = System.Drawing.Color.Silver;
-            Niveaux.detailCombat.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F,
-                ((System.Drawing.FontStyle) ((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))),
-                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            Niveaux.detailCombat.Location = new System.Drawing.Point(12, 12);
-            Niveaux.detailCombat.Multiline = true;
-            Niveaux.detailCombat.Name = "detailCombat";
-            Niveaux.detailCombat.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            Niveaux.detailCombat.Size = new System.Drawing.Size(500, 357);
-            Niveaux.detailCombat.TabIndex = 100;
-            Niveaux.detailCombat.Text = resources.GetString("detailCombat.Text");
+            Niveaux.combat.BackColor = System.Drawing.Color.White;
+            Niveaux.combat.Location = new System.Drawing.Point(12, 12);
+            Niveaux.combat.Multiline = true;
+            Niveaux.combat.Name = "combat";
+            Niveaux.combat.Size = new System.Drawing.Size(350, 348);
+            Niveaux.combat.TabIndex = 100;
+            Niveaux.combat.Text = resources.GetString("combat.Text");
+            Niveaux.combat.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Niveaux
             // 
@@ -85,8 +82,8 @@ namespace GameMonsterWinForm
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (224)))), ((int) (((byte) (224)))),
                 ((int) (((byte) (224)))));
-            this.ClientSize = new System.Drawing.Size(550, 561);
-            this.Controls.Add(Niveaux.detailCombat);
+            this.ClientSize = new System.Drawing.Size(396, 563);
+            this.Controls.Add(Niveaux.combat);
             this.Controls.Add(this.end);
             this.Controls.Add(this.choixNiveaux);
             this.Font = new System.Drawing.Font("Segoe UI Black", 9.75F,
@@ -103,6 +100,6 @@ namespace GameMonsterWinForm
 
         private System.Windows.Forms.Button choixNiveaux;
         private System.Windows.Forms.Button end;
-        public static System.Windows.Forms.TextBox detailCombat;
+        public static System.Windows.Forms.TextBox combat;
     }
 }

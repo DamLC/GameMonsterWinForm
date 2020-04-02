@@ -48,11 +48,11 @@ namespace TPjeu.Personnages
                 degats = lancerDe(26) + epee.frappe;
             }
             
-            Niveaux.detailCombat.AppendText(" Il  reste "+ pointVie + " PV au boss, ");
-            Niveaux.detailCombat.AppendText(Narration.espace());
-            Niveaux.detailCombat.AppendText( DialogueBoss.effetDegatsBoss(degats));
-            Niveaux.detailCombat.AppendText(Narration.espace());
-            Niveaux.detailCombat.AppendText(" le boss vous infige "+degats+" dégats\n");
+            Niveaux.combat.AppendText(" Il  reste "+ pointVie + " PV au boss, ");
+            Niveaux.combat.AppendText(Narration.espace());
+            Niveaux.combat.AppendText( DialogueBoss.effetDegatsBoss(degats));
+            Niveaux.combat.AppendText(Narration.espace());
+            Niveaux.combat.AppendText(" le boss vous infige "+degats+" dégats\n");
             joueur.subitDegats(degats);
             
            
